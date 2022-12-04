@@ -29,7 +29,7 @@ const Register = () => {
     // 1. Lakukan Axios POST ke API Register pada backend di bawah ini
     // body yang digunakan adalah username, email, dan password
     try {
-      await axios.post('http://localhost:3000/register',{
+      await axios.post(`${process.env.BACKEND_URL}/register`,{
         username: data.get('username'),
         password: data.get('password'),
         email: data.get('email')

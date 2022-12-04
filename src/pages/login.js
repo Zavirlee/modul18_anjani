@@ -30,7 +30,7 @@ const Login = () => {
       // dengan parameter 'email' dan 'pass' yang didapat dari form (clue ada pada line 23 dan 24).
 
       try {
-        const response = await axios.post(`https://modul17prasashti-alya-anjani-production.up.railway.app/login`,{
+        const response = await axios.post(`${process.env.BACKEND_URL}/login`,{
           email: data.get('email'),
           password: data.get('password')
       })

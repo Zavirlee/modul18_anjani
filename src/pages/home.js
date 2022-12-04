@@ -49,7 +49,7 @@ const Home = () => {
         // set isLogin menjadi true. bila tidak, redirect ke halaman login
         function verifikasi(token) {
             axios
-              .post('http://localhost:3000/verify',{
+              .post(`${process.env.BACKEND_URL}/veriy`,{
               token: localStorage.getItem('token'),
             })
             .then(function(response){

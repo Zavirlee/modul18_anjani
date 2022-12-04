@@ -30,7 +30,7 @@ const Login = () => {
       // dengan parameter 'email' dan 'pass' yang didapat dari form (clue ada pada line 23 dan 24).
 
       try {
-        const response = await axios.post(`${process.env.BACKEND_URL}/login`,{
+        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`,{
           email: data.get('email'),
           password: data.get('password')
       })
